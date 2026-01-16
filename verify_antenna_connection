@@ -27,7 +27,7 @@ void loop() {
   // Nothing needed here for this test
 }
 
-/* sample 
+/* sample correct table looking
 EN_RXADDR	= 0x03
 RF_CH		= 0x4c
 RF_SETUP	= 0x03
