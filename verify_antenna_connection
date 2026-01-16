@@ -26,3 +26,16 @@ void setup() {
 void loop() {
   // Nothing needed here for this test
 }
+
+/* sample 
+EN_RXADDR	= 0x03
+RF_CH		= 0x4c
+RF_SETUP	= 0x03
+CONFIG		= 0x0e
+DYNPD/FEATURE	= 0x00 0x00
+Data Rate	= 1 MBPS
+Model		= nRF24L01+
+CRC Length	= 16 bits
+PA Power	= PA_LOW
+ARC		= 0
+*/
