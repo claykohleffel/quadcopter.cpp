@@ -1,0 +1,28 @@
+#include <SPI.h>
+#include <nRF24L01.h>
+#include <RF24.h>
+#include <printf.h> // Essential for printDetails on Arduino
+
+// Adjust pins: CE, CSN. 
+// Common Nano wiring: CE -> D9, CSN -> D10
+RF24 radio(9, 10); 
+
+void setup() {
+  Serial.begin(115200);
+  printf_begin(); // Initialize printf
+  
+  if (!radio.begin()) {
+    Serial.println(F("Radio hardware not responding!"));
+    while (1) {} // Hold here on failure
+  }
+
+  // Set a standard configuration
+  radio.setPALevel(RF24_PA_LOW);
+  
+  // THIS IS THE KEY COMMAND
+  radio.printDetails(); 
+}
+
+void loop() {
+  // Nothing needed here for this test
+}
